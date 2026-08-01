@@ -1,0 +1,325 @@
+/* ============================
+   全体
+============================ */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #f8f8f8;
+    color: #333;
+}
+
+/* ============================
+   ヘッダー
+============================ */
+header {
+    background: #222;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px; /* 好きな大きさに変更 */
+    font-weight: bold;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    margin: 8px 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* PCメニュー */
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+}
+
+/* ============================
+   ヒーローセクション（TOP）
+============================ */
+.hero {
+    background: #4da3ff;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 18px 35px; /* ← ボタンを大きくするポイント */
+    background: #5865F2;
+    color: white;
+    border-radius: 30px; /* ← 丸みを強くして存在感UP */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px; /* ← 文字を大きく */
+}}
+
+
+/* ============================
+   コンテンツ共通
+============================ */
+.content {
+    padding: 20px;
+    background: white;
+    margin: 15px;
+    border-radius: 8px;
+}
+
+.merit-list {
+    padding-left: 20px;
+}
+
+.merit-list li {
+    margin-bottom: 8px;
+}
+
+/* PCコンテンツ幅 */
+@media (min-width: 768px) {
+    .content {
+        max-width: 900px;
+        margin: 20px auto;
+    }
+}
+
+/* ============================
+   事業紹介ページ
+============================ */
+.service-list {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.feature-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feature-item {
+    background: #eef6ff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.feature-item h4 {
+    margin-top: 0;
+}
+
+@media (min-width: 768px) {
+    .feature-box {
+        flex-direction: row;
+    }
+
+    .feature-item {
+        flex: 1;
+    }
+}
+
+/* ============================
+   講師紹介ページ
+============================ */
+.teacher-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.teacher-img {
+    width: 100%;
+    height: 250px; /* ← 横長に見せる高さ（調整OK） */
+    object-fit: cover; /* ← 横長トリミング効果 */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+.teacher-info h3 {
+    margin-top: 0;
+}
+
+.teacher-title {
+    font-weight: bold;
+    color: #4da3ff;
+    margin-bottom: 15px;
+}
+
+.teacher-info ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .teacher-box {
+        display: flex;
+        gap: 20px;
+    }
+
+    .teacher-img {
+        width: 40%;
+        height: auto;
+    }
+
+    .teacher-info {
+        width: 60%;
+    }
+}
+
+/* ============================
+   料金ページ
+============================ */
+.price-box {
+    background: #eef6ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4da3ff;
+}
+
+.note {
+    font-size: 14px;
+    color: #777;
+}
+
+/* ============================
+   Discord案内ページ
+============================ */
+ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* ============================
+   お問い合わせフォーム
+============================ */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* ============================
+   フッター
+============================ */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    color: white;
+    margin-top: 20px;
+}
+
+header.small {
+    padding: 5px;
+    transition: 0.3s;
+}
+
+#toTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: #4da3ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    display: none;
+    cursor: pointer;
+}
+
+/* ▼ボタン */
+.menu-toggle {
+    display: none;
+    background: #4da3ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 18px;
+}
+
+/* ▼ボタン */
+.menu-toggle {
+    display: none;
+    background: #4da3ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 18px;
+}
+
+/* スマホ時だけ表示 */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* 最初は隠す */
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul.show {
+        display: flex; /* ▼を押したら表示 */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+.back-home {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.back-home a {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #4da3ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.back-home a:hover {
+    opacity: 0.9;
+}

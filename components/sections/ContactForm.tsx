@@ -31,6 +31,8 @@ export default function ContactForm() {
   /** 二重送信防止フラグ（state の更新を待たずに判定する） */
   const submitting = useRef(false);
   const successRef = useRef<HTMLDivElement | null>(null);
+  /** 送信エラーの表示欄（エラー時にここまでスクロールする） */
+  const formErrorRef = useRef<HTMLDivElement | null>(null);
 
   // クラスページの「申し込む」ボタンから来た場合、希望クラスを自動選択する
   useEffect(() => {
@@ -45,6 +47,16 @@ export default function ContactForm() {
   useEffect(() => {
     if (status === "success") successRef.current?.focus();
   }, [status]);
+
+  // 送信エラー時は、画面下のボタン付近にいても気づけるようエラー欄までスクロールする
+  useEffect(() => {
+    if (!formError) return;
+    formErrorRef.current?.scrollIntoView({
+      block: "center",
+      behavior: "smooth",
+    });
+    formErrorRef.current?.focus({ preventScroll: true });
+  }, [formError]);
 
   const update = (field: keyof ContactFormValues, value: string) => {
     setValues((prev) => ({ ...prev, [field]: value }));
@@ -196,6 +208,8 @@ export default function ContactForm() {
       {/* 送信エラー表示 */}
       {formError && (
         <div
+          ref={formErrorRef}
+          tabIndex={-1}
           role="alert"
           className="flex gap-3 rounded-xl border border-red-200 bg-red-50 p-4"
         >

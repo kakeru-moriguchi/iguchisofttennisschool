@@ -13,7 +13,7 @@ export const siteConfig = {
   shortName: "イグチソフトテニススクール",
 
   /** サイトの本番URL（OGP・sitemap で使用。デプロイ後に書き換えてください） */
-  url: "https://iguchi-soft-tennis.jp",
+  url: "https://iguchisofttennisschool.vercel.app",
 
   /** サイト全体のディスクリプション（SEO） */
   description:

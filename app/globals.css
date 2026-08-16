@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@theme {
+  /* ブランドカラー ------------------------------------------------ */
+  --color-navy-50: #eef4fb;
+  --color-navy-100: #d6e4f4;
+  --color-navy-200: #adc7e6;
+  --color-navy-300: #7ba3d4;
+  --color-navy-400: #4a7ab8;
+  --color-navy-500: #2b5a97;
+  --color-navy-600: #1c4478;
+  --color-navy-700: #12325c;
+  --color-navy-800: #0b2545;
+  --color-navy-900: #071a32;
+
+  --color-sky-brand: #0ea5e9;
+  --color-sky-brand-dark: #0284c7;
+  --color-sky-brand-light: #38bdf8;
+
+  --color-gold-300: #e2ce8e;
+  --color-gold-400: #d4b95f;
+  --color-gold-500: #c8a94b;
+  --color-gold-600: #a68a33;
+
+  --color-graphite-700: #2a3441;
+  --color-graphite-800: #1c2430;
+  --color-graphite-900: #12181f;
+  --color-silver-300: #cbd5e1;
+  --color-silver-400: #9aa7b4;
+
+  /* フォント ------------------------------------------------------ */
+  --font-sans: var(--font-noto-sans-jp), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-outfit), var(--font-noto-sans-jp), sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* 固定ヘッダー分のアンカーオフセット */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: var(--color-navy-900);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* SP下部の固定CTAバーに隠れないよう余白を確保 */
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* 日本語の見出しは字間を少し詰める */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-feature-settings: "palt";
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* iOS で入力時に自動ズームしないよう 16px を確保 */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  /* キーボード操作時のフォーカス表示 */
+  :focus-visible {
+    outline: 3px solid var(--color-sky-brand);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  /* スクロールフェードイン ---------------------------------------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* 画像の軽いズーム ---------------------------------------------- */
+  .zoom-parent img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .zoom-parent:hover img,
+  .zoom-parent:focus-within img {
+    transform: scale(1.06);
+  }
+
+  /* セクションの左右パディング（全ページ共通） */
+  .container-page {
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-page {
+      padding-inline: 2rem;
+    }
+  }
+
+  /* 見出しの上の細いライン */
+  .rule-accent::before {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    background: var(--color-sky-brand);
+    margin-bottom: 1rem;
+    border-radius: 999px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* アニメーションを控えたいユーザーへの配慮 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .zoom-parent img {
+    transition: none;
+  }
+
+  .zoom-parent:hover img,
+  .zoom-parent:focus-within img {
+    transform: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -46,7 +46,13 @@ export default function HomePage() {
               </p>
 
               {/* 数字で見るスクール */}
-              <dl className="mt-8 grid grid-cols-3 gap-4 border-t border-navy-100 pt-6">
+              {/* 項目数に合わせて列数が変わります */}
+              <dl
+                className="mt-8 grid gap-4 border-t border-navy-100 pt-6"
+                style={{
+                  gridTemplateColumns: `repeat(${stats.length}, minmax(0, 1fr))`,
+                }}
+              >
                 {stats.map((s) => (
                   <div key={s.label}>
                     <dt className="sr-only">{s.label}</dt>

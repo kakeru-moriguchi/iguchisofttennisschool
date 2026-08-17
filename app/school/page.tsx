@@ -57,7 +57,13 @@ export default function SchoolPage() {
 
           {/* 数字で見るスクール */}
           <Reveal delay={100}>
-            <dl className="mt-12 grid grid-cols-3 gap-4 rounded-2xl border border-navy-100 bg-navy-50 p-6 sm:p-8">
+            {/* 項目数に合わせて列数が変わります */}
+            <dl
+              className="mt-12 grid gap-4 rounded-2xl border border-navy-100 bg-navy-50 p-6 sm:p-8"
+              style={{
+                gridTemplateColumns: `repeat(${stats.length}, minmax(0, 1fr))`,
+              }}
+            >
               {stats.map((s) => (
                 <div key={s.label} className="text-center">
                   <dt className="sr-only">{s.label}</dt>

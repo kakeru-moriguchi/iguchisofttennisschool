@@ -152,21 +152,13 @@ export default function SchoolPage() {
             />
           </Reveal>
 
-          <ul className="mt-10 grid gap-5 md:grid-cols-2">
-            {features.map((f, i) => (
-              <Reveal as="li" key={f.title} delay={(i % 2) * 80}>
-                <div className="flex h-full gap-5 rounded-2xl border border-navy-100 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sky-50 text-sky-brand-dark">
-                    <Icon name={f.icon} className="h-6 w-6" />
-                  </span>
-                  <div>
-                    <h3 className="text-lg font-bold text-navy-800">
-                      {f.title}
-                    </h3>
-                    <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
-                      {f.body}
-                    </p>
-                  </div>
+          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {features.map((text, i) => (
+              <Reveal as="li" key={text} delay={(i % 3) * 70}>
+                <div className="flex h-full min-h-[132px] items-center justify-center rounded-2xl border border-navy-100 bg-white px-5 py-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-sky-brand hover:shadow-lg sm:min-h-[150px]">
+                  <h3 className="text-lg leading-snug font-bold text-navy-800 sm:text-xl">
+                    {text}
+                  </h3>
                 </div>
               </Reveal>
             ))}

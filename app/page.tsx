@@ -257,9 +257,16 @@ export default function HomePage() {
                 ))}
               </ul>
 
-              <p className="mt-6 text-[15px] leading-relaxed text-navy-100">
-                {mainInstructor.message[0]}
-              </p>
+              <div className="mt-6 space-y-2">
+                {mainInstructor.message.slice(0, 2).map((p, i) => (
+                  <p
+                    key={i}
+                    className="text-[15px] leading-relaxed whitespace-pre-line text-navy-100"
+                  >
+                    {p}
+                  </p>
+                ))}
+              </div>
 
               <Link
                 href="/instructors"

@@ -107,7 +107,10 @@ export default function InstructorCard({ item }: { item: Instructor }) {
           </h3>
           <div className="mt-3 space-y-3">
             {item.message.map((p, i) => (
-              <p key={i} className="text-sm leading-relaxed text-slate-700">
+              <p
+                key={i}
+                className="text-sm leading-relaxed whitespace-pre-line text-slate-700"
+              >
                 {p}
               </p>
             ))}

@@ -83,24 +83,9 @@ export const galleryPhotos: Photo[] = [
     caption: "指導風景",
   },
   {
-    src: "/images/school/match.jpg",
-    alt: "ソフトテニスの試合の様子",
-    caption: "試合",
-  },
-  {
-    src: "/images/school/tournament.jpg",
-    alt: "大会に出場するスクール生",
-    caption: "大会",
-  },
-  {
-    src: "/images/school/group.jpg",
-    alt: "イグチソフトテニススクールの集合写真",
-    caption: "集合写真",
-  },
-  {
     src: "/images/school/stroke.jpg",
-    alt: "ストロークを打つスクール生",
-    caption: "ストローク",
+    alt: "グリップの握り方を指導する様子",
+    caption: "個別指導",
   },
 ];
 

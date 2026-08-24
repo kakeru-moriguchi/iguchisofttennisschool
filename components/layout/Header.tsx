@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -196,20 +197,18 @@ function LogoMark({ className }: { className?: string }) {
   return (
     <span
       className={cn(
-        "flex items-center justify-center rounded-lg bg-navy-800",
+        "relative shrink-0 overflow-hidden rounded-lg bg-navy-900",
         className,
       )}
-      aria-hidden="true"
     >
-      <svg viewBox="0 0 24 24" className="h-[62%] w-[62%]" fill="none">
-        <circle cx="12" cy="12" r="9" stroke="#0ea5e9" strokeWidth="1.8" />
-        <path
-          d="M3.6 8.5c4.5 1.2 7.9 4.6 9 9.2M20.4 8.5c-4.5 1.2-7.9 4.6-9 9.2"
-          stroke="white"
-          strokeWidth="1.6"
-          strokeLinecap="round"
-        />
-      </svg>
+      <Image
+        src="/images/logo.jpg"
+        alt=""
+        fill
+        sizes="48px"
+        priority
+        className="object-cover"
+      />
     </span>
   );
 }

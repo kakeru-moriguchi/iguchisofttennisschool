@@ -26,8 +26,6 @@ export default function InstructorsPage() {
         eyebrow="Instructor"
         title="講師紹介"
         description="元ナショナルチーム日本代表として世界で戦った経験を、宮崎の選手たちへ。技術だけでなく「勝つための考え方」までお伝えします。"
-        image="/images/instructors/iguchi-yusuke.jpg"
-        imageAlt="代表・ヘッドコーチ 井口雄介"
       />
 
       <section className="bg-white py-14 md:py-20">

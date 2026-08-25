@@ -12,16 +12,31 @@ export default function Hero() {
 
   return (
     <section className="relative isolate flex min-h-[88svh] items-end overflow-hidden bg-navy-900 md:min-h-[92svh]">
-      {/* 背景写真 */}
+      {/* 背景写真（パソコンとスマートフォンで出し分け） */}
       <div className="absolute inset-0 -z-10">
-        <SmartImage
-          src={siteConfig.heroImage}
-          alt="ソフトテニスの練習に打ち込むイグチソフトテニススクールの選手たち"
-          placeholderLabel="ソフトテニスの練習・試合の写真"
-          sizes="100vw"
-          priority
-          tone="brand"
-        />
+        {/* スマートフォン用（縦向きの写真） */}
+        <div className="absolute inset-0 md:hidden">
+          <SmartImage
+            src={siteConfig.heroImageMobile}
+            alt="ソフトテニスの試合を終えて健闘をたたえ合う選手たち"
+            placeholderLabel="ソフトテニスの練習・試合の写真"
+            sizes="100vw"
+            priority
+            tone="brand"
+          />
+        </div>
+        {/* パソコン用（横向きの写真） */}
+        <div className="absolute inset-0 hidden md:block">
+          <SmartImage
+            src={siteConfig.heroImage}
+            alt="ソフトテニスの練習に打ち込むイグチソフトテニススクールの選手たち"
+            placeholderLabel="ソフトテニスの練習・試合の写真"
+            sizes="100vw"
+            priority
+            tone="brand"
+          />
+        </div>
+
         {/* 文字を読みやすくするためのオーバーレイ */}
         <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/75 to-navy-900/35" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-900/70 to-transparent" />

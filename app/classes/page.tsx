@@ -33,19 +33,17 @@ export default function ClassesPage() {
         eyebrow="Class"
         title="クラス"
         description="レベルと目的に合わせた8つのクラスをご用意しています。気になるクラスから、そのままお申し込みいただけます。"
-        image="/images/school/practice.jpg"
-        imageAlt="イグチソフトテニススクールの練習風景"
       />
 
       {/* クラス一覧への目次（スマートフォンでも探しやすく） */}
-      <nav aria-label="クラス一覧" className="border-b border-navy-100 bg-white">
+      <nav aria-label="クラス一覧" className="border-b border-brand-100 bg-white">
         <div className="container-page py-5">
           <ul className="flex flex-wrap gap-2">
             {classes.map((c) => (
               <li key={c.slug}>
                 <a
                   href={`#${c.slug}`}
-                  className="flex min-h-[44px] items-center rounded-lg border border-navy-100 bg-navy-50 px-4 text-sm font-bold text-navy-800 transition-colors hover:border-sky-brand hover:text-sky-brand-dark"
+                  className="flex min-h-[44px] items-center rounded-lg border border-brand-100 bg-brand-50 px-4 text-sm font-bold text-brand-800 transition-colors hover:border-accent hover:text-accent-dark"
                 >
                   {c.name}
                 </a>
@@ -56,7 +54,7 @@ export default function ClassesPage() {
       </nav>
 
       {/* 特別クラス（VIP / EX） */}
-      <section className="bg-navy-900 py-16 md:py-24">
+      <section className="bg-brand-900 py-16 md:py-24">
         <div className="container-page">
           <Reveal>
             <SectionHeading
@@ -100,9 +98,9 @@ export default function ClassesPage() {
           </ul>
 
           <Reveal className="mt-8">
-            <div className="rounded-2xl border border-navy-100 bg-navy-50 p-6 sm:flex sm:items-center sm:justify-between sm:gap-6">
+            <div className="rounded-2xl border border-brand-100 bg-brand-50 p-6 sm:flex sm:items-center sm:justify-between sm:gap-6">
               <div>
-                <h3 className="text-base font-bold text-navy-800">
+                <h3 className="text-base font-bold text-brand-800">
                   単発参加・回数券もご利用いただけます
                 </h3>
                 <p className="mt-1.5 text-sm leading-relaxed text-slate-600">
@@ -111,7 +109,7 @@ export default function ClassesPage() {
               </div>
               <Link
                 href="/prices"
-                className="mt-4 flex min-h-[52px] items-center justify-center rounded-xl bg-navy-800 px-7 text-[15px] font-bold text-white transition-colors hover:bg-navy-700 sm:mt-0 sm:shrink-0"
+                className="mt-4 flex min-h-[52px] items-center justify-center rounded-xl bg-brand-800 px-7 text-[15px] font-bold text-white transition-colors hover:bg-brand-700 sm:mt-0 sm:shrink-0"
               >
                 料金表を見る
               </Link>
@@ -121,7 +119,7 @@ export default function ClassesPage() {
       </section>
 
       {/* その他のサービス */}
-      <section className="bg-navy-50 py-16 md:py-24">
+      <section className="bg-brand-50 py-16 md:py-24">
         <div className="container-page">
           <Reveal>
             <SectionHeading

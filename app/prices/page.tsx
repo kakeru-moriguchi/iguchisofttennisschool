@@ -28,8 +28,6 @@ export default function PricesPage() {
         eyebrow="Price"
         title="料金表"
         description="月会費のほか、単発参加や回数券もご利用いただけます。ご都合に合わせてお選びください。"
-        image="/images/school/match.jpg"
-        imageAlt="ソフトテニスの試合の様子"
       />
 
       {/* 通常クラスの料金 */}
@@ -64,7 +62,7 @@ export default function PricesPage() {
       </section>
 
       {/* 特別クラス・その他の料金 */}
-      <section className="bg-navy-50 py-16 md:py-24">
+      <section className="bg-brand-50 py-16 md:py-24">
         <div className="container-page">
           <Reveal>
             <SectionHeading
@@ -88,8 +86,8 @@ export default function PricesPage() {
       <section className="bg-white py-14 md:py-16">
         <div className="container-page">
           <Reveal>
-            <div className="rounded-2xl border border-navy-100 bg-navy-50 p-6 sm:p-8">
-              <h2 className="text-lg font-bold text-navy-800">
+            <div className="rounded-2xl border border-brand-100 bg-brand-50 p-6 sm:p-8">
+              <h2 className="text-lg font-bold text-brand-800">
                 料金に関するご注意
               </h2>
               <ul className="mt-4 space-y-2.5">
@@ -98,7 +96,7 @@ export default function PricesPage() {
                     key={note}
                     className="flex gap-2.5 text-sm leading-relaxed text-slate-600"
                   >
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-brand" />
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                     {note}
                   </li>
                 ))}

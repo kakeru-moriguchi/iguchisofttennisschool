@@ -31,7 +31,7 @@ export default function ContactPage() {
           <div className="grid gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,4fr)] lg:items-start lg:gap-14">
             {/* フォーム */}
             <div>
-              <h2 className="text-xl font-bold text-navy-800 sm:text-2xl">
+              <h2 className="text-xl font-bold text-brand-800 sm:text-2xl">
                 お問い合わせフォーム
               </h2>
               <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
@@ -50,8 +50,8 @@ export default function ContactPage() {
 
             {/* 補足情報 */}
             <aside className="space-y-5 lg:sticky lg:top-24">
-              <div className="rounded-2xl border border-navy-100 bg-navy-50 p-6">
-                <h2 className="text-base font-bold text-navy-800">
+              <div className="rounded-2xl border border-brand-100 bg-brand-50 p-6">
+                <h2 className="text-base font-bold text-brand-800">
                   お問い合わせの前に
                 </h2>
                 <ul className="mt-4 space-y-3">
@@ -65,15 +65,15 @@ export default function ContactPage() {
                       key={t}
                       className="flex gap-2.5 text-sm leading-relaxed text-slate-600"
                     >
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-brand" />
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                       {t}
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="rounded-2xl border border-navy-100 bg-white p-6">
-                <h2 className="text-base font-bold text-navy-800">練習会場</h2>
+              <div className="rounded-2xl border border-brand-100 bg-white p-6">
+                <h2 className="text-base font-bold text-brand-800">練習会場</h2>
                 <ul className="mt-3 space-y-2">
                   {siteConfig.area.venues.map((v) => (
                     <li key={v} className="text-sm text-slate-600">
@@ -85,7 +85,7 @@ export default function ContactPage() {
 
                 {siteConfig.social.length > 0 && (
                   <>
-                    <h2 className="mt-6 text-base font-bold text-navy-800">
+                    <h2 className="mt-6 text-base font-bold text-brand-800">
                       SNS
                     </h2>
                     <ul className="mt-3 flex flex-wrap gap-2.5">
@@ -95,7 +95,7 @@ export default function ContactPage() {
                             href={s.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex min-h-[44px] items-center rounded-lg border border-navy-100 bg-navy-50 px-4 text-sm font-bold text-navy-800 transition-colors hover:border-sky-brand hover:text-sky-brand-dark"
+                            className="flex min-h-[44px] items-center rounded-lg border border-brand-100 bg-brand-50 px-4 text-sm font-bold text-brand-800 transition-colors hover:border-accent hover:text-accent-dark"
                           >
                             {s.label}
                           </a>
@@ -121,8 +121,8 @@ function FormSkeleton() {
     <div className="space-y-6" aria-hidden="true">
       {Array.from({ length: 5 }).map((_, i) => (
         <div key={i} className="space-y-2">
-          <div className="h-4 w-28 rounded bg-navy-100" />
-          <div className="h-[52px] w-full rounded-xl bg-navy-50" />
+          <div className="h-4 w-28 rounded bg-brand-100" />
+          <div className="h-[52px] w-full rounded-xl bg-brand-50" />
         </div>
       ))}
     </div>

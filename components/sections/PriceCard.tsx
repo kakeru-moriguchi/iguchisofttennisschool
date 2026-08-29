@@ -14,24 +14,24 @@ import { cn } from "@/lib/utils";
  */
 export function PriceCard({ row }: { row: PriceRow }) {
   return (
-    <article className="overflow-hidden rounded-2xl border border-navy-100 bg-white shadow-sm">
-      <div className="flex items-baseline justify-between gap-3 bg-navy-800 px-5 py-4">
+    <article className="overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-sm">
+      <div className="flex items-baseline justify-between gap-3 bg-brand-800 px-5 py-4">
         <h3 className="text-lg font-bold text-white">{row.className}</h3>
         <Link
           href={`/classes#${row.classSlug}`}
-          className="shrink-0 text-xs font-medium text-sky-brand-light underline underline-offset-4"
+          className="shrink-0 text-xs font-medium text-accent-light underline underline-offset-4"
         >
           クラス詳細
         </Link>
       </div>
 
-      <dl className="divide-y divide-navy-100">
+      <dl className="divide-y divide-brand-100">
         {priceColumns.map((col, i) => (
           <div
             key={col.key}
             className={cn(
               "flex items-center justify-between gap-4 px-5 py-3.5",
-              i === 0 && "bg-sky-50/60",
+              i === 0 && "bg-brand-50/70",
             )}
           >
             <dt className="text-sm font-medium text-slate-600">
@@ -42,7 +42,7 @@ export function PriceCard({ row }: { row: PriceRow }) {
             </dt>
             <dd
               className={cn(
-                "shrink-0 font-extrabold text-navy-800",
+                "shrink-0 font-extrabold text-brand-800",
                 i === 0 ? "text-2xl" : "text-lg",
               )}
             >
@@ -57,13 +57,13 @@ export function PriceCard({ row }: { row: PriceRow }) {
 
 const SPECIAL_STYLE = {
   vip: {
-    card: "border-gold-600/40 bg-navy-900",
+    card: "border-gold-600/40 bg-brand-900",
     label: "text-gold-400",
     name: "text-white",
     price: "text-gold-300",
-    body: "text-navy-100",
+    body: "text-brand-100",
     note: "text-gold-400/80",
-    button: "bg-gold-500 text-navy-900 hover:bg-gold-400",
+    button: "bg-gold-500 text-brand-900 hover:bg-gold-400",
     badge: "特別クラス",
   },
   ex: {
@@ -77,13 +77,13 @@ const SPECIAL_STYLE = {
     badge: "選抜クラス",
   },
   service: {
-    card: "border-navy-100 bg-white",
-    label: "text-sky-brand-dark",
-    name: "text-navy-800",
-    price: "text-navy-800",
+    card: "border-brand-100 bg-white",
+    label: "text-accent-dark",
+    name: "text-brand-800",
+    price: "text-brand-800",
     body: "text-slate-600",
     note: "text-slate-500",
-    button: "bg-navy-800 text-white hover:bg-navy-700",
+    button: "bg-brand-800 text-white hover:bg-brand-700",
     badge: null,
   },
 } as const;

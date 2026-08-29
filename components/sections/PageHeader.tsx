@@ -21,7 +21,7 @@ export default function PageHeader({
   imageAlt,
 }: PageHeaderProps) {
   return (
-    <section className="relative isolate overflow-hidden bg-navy-800">
+    <section className="relative isolate overflow-hidden bg-brand-800">
       {image && (
         <div className="absolute inset-0 -z-10">
           <SmartImage
@@ -31,14 +31,14 @@ export default function PageHeader({
             sizes="100vw"
             priority
           />
-          <div className="absolute inset-0 bg-navy-900/70" />
+          <div className="absolute inset-0 bg-brand-900/70" />
         </div>
       )}
 
       <div className="container-page py-12 md:py-20">
         {/* パンくず */}
         <nav aria-label="パンくずリスト">
-          <ol className="flex flex-wrap items-center gap-2 text-xs text-navy-200">
+          <ol className="flex flex-wrap items-center gap-2 text-xs text-brand-200">
             <li>
               <Link href="/" className="transition-colors hover:text-white">
                 ホーム
@@ -49,14 +49,14 @@ export default function PageHeader({
           </ol>
         </nav>
 
-        <p className="font-display mt-6 text-xs font-semibold tracking-[0.2em] text-sky-brand-light uppercase">
+        <p className="font-display mt-6 text-xs font-semibold tracking-[0.2em] text-accent-light uppercase">
           {eyebrow}
         </p>
         <h1 className="mt-2 text-3xl leading-tight font-bold text-white sm:text-4xl md:text-5xl">
           {title}
         </h1>
         {description && (
-          <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-navy-100 sm:text-base">
+          <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-brand-100 sm:text-base">
             {description}
           </p>
         )}

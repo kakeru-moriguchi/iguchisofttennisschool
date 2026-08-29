@@ -11,7 +11,7 @@ export default function Hero() {
   const { catchCopy } = siteConfig;
 
   return (
-    <section className="relative isolate flex min-h-[88svh] items-end overflow-hidden bg-navy-900 md:min-h-[92svh]">
+    <section className="relative isolate flex min-h-[88svh] items-end overflow-hidden bg-brand-900 md:min-h-[92svh]">
       {/* 背景写真（パソコンとスマートフォンで出し分け） */}
       <div className="absolute inset-0 -z-10">
         {/* スマートフォン用（縦向きの写真） */}
@@ -38,15 +38,15 @@ export default function Hero() {
         </div>
 
         {/* 文字を読みやすくするためのオーバーレイ */}
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/75 to-navy-900/35" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-900/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-900 via-brand-900/75 to-brand-900/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-900/70 to-transparent" />
       </div>
 
       <div className="container-page pt-28 pb-14 md:pt-32 md:pb-20">
         <div className="max-w-3xl">
           {/* 所在地バッジ */}
           <p className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur-sm sm:text-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-sky-brand-light" />
+            <span className="h-1.5 w-1.5 rounded-full bg-accent-light" />
             {siteConfig.area.prefecture}
             {siteConfig.area.city}のソフトテニススクール
           </p>
@@ -57,7 +57,7 @@ export default function Hero() {
               IGUCHI SOFT
               <br className="sm:hidden" /> TENNIS SCHOOL
             </span>
-            <span className="mt-3 block text-base font-bold tracking-wide text-sky-brand-light sm:text-lg md:text-xl">
+            <span className="mt-3 block text-base font-bold tracking-wide text-accent-light sm:text-lg md:text-xl">
               イグチソフトテニススクール
             </span>
           </h1>
@@ -66,7 +66,7 @@ export default function Hero() {
           <p className="mt-7 text-[clamp(1.25rem,4.5vw,2rem)] leading-snug font-bold text-white">
             {catchCopy.headline}
           </p>
-          <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-navy-100 sm:text-base">
+          <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-brand-100 sm:text-base">
             {catchCopy.lead.map((line, i) => (
               <span key={i} className="block">
                 {line}
@@ -78,14 +78,14 @@ export default function Hero() {
           <div className="mt-9 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
             <Link
               href="/classes"
-              className="flex min-h-[56px] items-center justify-center gap-2 rounded-xl bg-sky-brand px-8 text-base font-bold text-white shadow-lg shadow-sky-brand/25 transition-all hover:bg-sky-brand-dark active:scale-[0.99] sm:min-w-[180px]"
+              className="flex min-h-[56px] items-center justify-center gap-2 rounded-xl bg-accent px-8 text-base font-bold text-white shadow-lg shadow-accent/25 transition-all hover:bg-accent-dark active:scale-[0.99] sm:min-w-[180px]"
             >
               クラスを見る
               <ArrowIcon />
             </Link>
             <Link
               href="/prices"
-              className="flex min-h-[56px] items-center justify-center gap-2 rounded-xl bg-white px-8 text-base font-bold text-navy-800 shadow-lg transition-all hover:bg-navy-50 active:scale-[0.99] sm:min-w-[180px]"
+              className="flex min-h-[56px] items-center justify-center gap-2 rounded-xl bg-white px-8 text-base font-bold text-brand-800 shadow-lg transition-all hover:bg-brand-50 active:scale-[0.99] sm:min-w-[180px]"
             >
               料金を見る
               <ArrowIcon />

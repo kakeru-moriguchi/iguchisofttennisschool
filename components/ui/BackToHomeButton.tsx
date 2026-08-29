@@ -12,7 +12,7 @@ export default function BackToHomeButton() {
     <div className="container-page py-12 md:py-16">
       <Link
         href="/"
-        className="mx-auto flex min-h-[56px] w-full max-w-md items-center justify-center gap-2.5 rounded-xl border-2 border-navy-800 bg-white px-6 text-[15px] font-bold text-navy-800 transition-all duration-200 hover:bg-navy-800 hover:text-white active:scale-[0.99]"
+        className="mx-auto flex min-h-[56px] w-full max-w-md items-center justify-center gap-2.5 rounded-xl border-2 border-brand-800 bg-white px-6 text-[15px] font-bold text-brand-800 transition-all duration-200 hover:bg-brand-800 hover:text-white active:scale-[0.99]"
       >
         <svg
           viewBox="0 0 24 24"

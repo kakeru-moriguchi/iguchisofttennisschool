@@ -34,8 +34,6 @@ export default function SchoolPage() {
         eyebrow="About Our School"
         title="スクール紹介"
         description="宮崎県宮崎市を拠点に活動するソフトテニススクールです。キッズから競技志向の選手まで、一人ひとりに合わせた指導でソフトテニスの楽しさと成長をサポートします。"
-        image="/images/school/coaching.jpg"
-        imageAlt="井口雄介コーチによる指導風景"
       />
 
       {/* 理念 */}
@@ -43,7 +41,7 @@ export default function SchoolPage() {
         <div className="container-page">
           <Reveal>
             <SectionHeading eyebrow="Mission" title="スクールの理念" />
-            <h3 className="mt-8 max-w-3xl text-2xl leading-relaxed font-bold whitespace-pre-line text-navy-800 sm:text-3xl md:text-4xl">
+            <h3 className="mt-8 max-w-3xl text-2xl leading-relaxed font-bold whitespace-pre-line text-brand-800 sm:text-3xl md:text-4xl">
               {philosophy.heading}
             </h3>
             <div className="mt-7 max-w-3xl space-y-5">
@@ -59,7 +57,7 @@ export default function SchoolPage() {
           <Reveal delay={100}>
             {/* 項目数に合わせて列数が変わります */}
             <dl
-              className="mt-12 grid gap-4 rounded-2xl border border-navy-100 bg-navy-50 p-6 sm:p-8"
+              className="mt-12 grid gap-4 rounded-2xl border border-brand-100 bg-brand-50 p-6 sm:p-8"
               style={{
                 gridTemplateColumns: `repeat(${stats.length}, minmax(0, 1fr))`,
               }}
@@ -68,10 +66,10 @@ export default function SchoolPage() {
                 <div key={s.label} className="text-center">
                   <dt className="sr-only">{s.label}</dt>
                   <dd>
-                    <span className="font-display text-3xl font-extrabold text-sky-brand-dark sm:text-5xl">
+                    <span className="font-display text-3xl font-extrabold text-accent-dark sm:text-5xl">
                       {s.value}
                     </span>
-                    <span className="ml-1 text-sm font-bold text-navy-800">
+                    <span className="ml-1 text-sm font-bold text-brand-800">
                       {s.unit}
                     </span>
                     <span className="mt-1.5 block text-xs leading-snug text-slate-500 sm:text-sm">
@@ -86,7 +84,7 @@ export default function SchoolPage() {
       </section>
 
       {/* 指導方針 */}
-      <section className="bg-navy-50 py-16 md:py-24">
+      <section className="bg-brand-50 py-16 md:py-24">
         <div className="container-page">
           <Reveal>
             <SectionHeading
@@ -99,11 +97,11 @@ export default function SchoolPage() {
           <ul className="mt-10 grid gap-5 md:grid-cols-3">
             {policies.map((p, i) => (
               <Reveal as="li" key={p.title} delay={i * 90}>
-                <div className="flex h-full flex-col rounded-2xl border border-navy-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8">
-                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-navy-800 text-sky-brand-light">
+                <div className="flex h-full flex-col rounded-2xl border border-brand-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-800 text-accent-light">
                     <Icon name={p.icon} className="h-7 w-7" />
                   </span>
-                  <h3 className="mt-5 text-lg font-bold text-navy-800">
+                  <h3 className="mt-5 text-lg font-bold text-brand-800">
                     {p.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-slate-600">
@@ -130,7 +128,7 @@ export default function SchoolPage() {
           <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {galleryPhotos.map((photo, i) => (
               <Reveal as="li" key={photo.src} delay={i * 60}>
-                <figure className="zoom-parent group relative aspect-[4/3] overflow-hidden rounded-2xl bg-navy-100">
+                <figure className="zoom-parent group relative aspect-[4/3] overflow-hidden rounded-2xl bg-brand-100">
                   <SmartImage
                     src={photo.src}
                     alt={photo.alt}
@@ -148,7 +146,7 @@ export default function SchoolPage() {
       </section>
 
       {/* スクールの特徴 */}
-      <section className="bg-navy-50 py-16 md:py-24">
+      <section className="bg-brand-50 py-16 md:py-24">
         <div className="container-page">
           <Reveal>
             <SectionHeading
@@ -161,8 +159,8 @@ export default function SchoolPage() {
           <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((text, i) => (
               <Reveal as="li" key={text} delay={(i % 3) * 70}>
-                <div className="flex h-full min-h-[132px] items-center justify-center rounded-2xl border border-navy-100 bg-white px-5 py-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-sky-brand hover:shadow-lg sm:min-h-[150px]">
-                  <h3 className="text-lg leading-snug font-bold text-navy-800 sm:text-xl">
+                <div className="flex h-full min-h-[132px] items-center justify-center rounded-2xl border border-brand-100 bg-white px-5 py-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-lg sm:min-h-[150px]">
+                  <h3 className="text-lg leading-snug font-bold text-brand-800 sm:text-xl">
                     {text}
                   </h3>
                 </div>

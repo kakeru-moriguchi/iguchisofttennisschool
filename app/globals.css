@@ -1,22 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  /* ブランドカラー ------------------------------------------------ */
-  --color-navy-50: #eef4fb;
-  --color-navy-100: #d6e4f4;
-  --color-navy-200: #adc7e6;
-  --color-navy-300: #7ba3d4;
-  --color-navy-400: #4a7ab8;
-  --color-navy-500: #2b5a97;
-  --color-navy-600: #1c4478;
-  --color-navy-700: #12325c;
-  --color-navy-800: #0b2545;
-  --color-navy-900: #071a32;
+  /* ブランドカラー（深緑）--------------------------------------- */
+  --color-brand-50: #f1f8ee;
+  --color-brand-100: #ddeed4;
+  --color-brand-200: #bcdcac;
+  --color-brand-300: #93c47c;
+  --color-brand-400: #68a54f;
+  --color-brand-500: #47872f;
+  --color-brand-600: #356a23;
+  --color-brand-700: #27511c;
+  --color-brand-800: #1b3c16;
+  --color-brand-900: #112a0f;
 
-  --color-sky-brand: #0ea5e9;
-  --color-sky-brand-dark: #0284c7;
-  --color-sky-brand-light: #38bdf8;
+  /* アクセント（黄緑）------------------------------------------- */
+  --color-accent: #4a851a;
+  --color-accent-dark: #3a6a14;
+  --color-accent-light: #a5d95c;
 
+  /* 特別クラス用 ------------------------------------------------ */
   --color-gold-300: #e2ce8e;
   --color-gold-400: #d4b95f;
   --color-gold-500: #c8a94b;
@@ -28,7 +30,7 @@
   --color-silver-300: #cbd5e1;
   --color-silver-400: #9aa7b4;
 
-  /* フォント ------------------------------------------------------ */
+  /* フォント ---------------------------------------------------- */
   --font-sans: var(--font-noto-sans-jp), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-outfit), var(--font-noto-sans-jp), sans-serif;
 }
@@ -42,7 +44,7 @@
 
   body {
     background-color: #ffffff;
-    color: var(--color-navy-900);
+    color: var(--color-brand-900);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -72,7 +74,7 @@
 
   /* キーボード操作時のフォーカス表示 */
   :focus-visible {
-    outline: 3px solid var(--color-sky-brand);
+    outline: 3px solid var(--color-accent);
     outline-offset: 2px;
     border-radius: 2px;
   }
@@ -124,7 +126,7 @@
     display: block;
     width: 2.5rem;
     height: 3px;
-    background: var(--color-sky-brand);
+    background: var(--color-accent);
     margin-bottom: 1rem;
     border-radius: 999px;
   }

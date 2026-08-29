@@ -64,7 +64,7 @@ export default function SmartImage({
 const TONES = {
   brand: {
     background:
-      "linear-gradient(135deg, #0b2545 0%, #12325c 45%, #0ea5e9 100%)",
+      "linear-gradient(135deg, #112a0f 0%, #1b3c16 45%, #4a851a 100%)",
     text: "rgba(255,255,255,0.92)",
     sub: "rgba(255,255,255,0.55)",
   },

@@ -7,14 +7,14 @@ type Size = "sm" | "md" | "lg";
 
 const VARIANTS: Record<Variant, string> = {
   primary:
-    "bg-sky-brand text-white shadow-sm hover:bg-sky-brand-dark hover:shadow-md active:scale-[0.99]",
+    "bg-accent text-white shadow-sm hover:bg-accent-dark hover:shadow-md active:scale-[0.99]",
   secondary:
-    "bg-navy-800 text-white shadow-sm hover:bg-navy-700 hover:shadow-md active:scale-[0.99]",
+    "bg-brand-800 text-white shadow-sm hover:bg-brand-700 hover:shadow-md active:scale-[0.99]",
   outline:
-    "border-2 border-navy-800 bg-white text-navy-800 hover:bg-navy-50 active:scale-[0.99]",
+    "border-2 border-brand-800 bg-white text-brand-800 hover:bg-brand-50 active:scale-[0.99]",
   ghost:
     "border-2 border-white/70 bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 active:scale-[0.99]",
-  gold: "bg-gold-500 text-navy-900 shadow-sm hover:bg-gold-400 hover:shadow-md active:scale-[0.99]",
+  gold: "bg-gold-500 text-brand-900 shadow-sm hover:bg-gold-400 hover:shadow-md active:scale-[0.99]",
 };
 
 const SIZES: Record<Size, string> = {

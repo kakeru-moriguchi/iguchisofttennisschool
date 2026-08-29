@@ -11,11 +11,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1,
     },
-    ...mainNav.map((item) => ({
-      url: `${siteConfig.url}${item.href}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: item.href === "/contact" ? 0.9 : 0.8,
-    })),
+    // トップページは上で追加済みのため除外する
+    ...mainNav
+      .filter((item) => item.href !== "/")
+      .map((item) => ({
+        url: `${siteConfig.url}${item.href}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: item.href === "/contact" ? 0.9 : 0.8,
+      })),
   ];
 }

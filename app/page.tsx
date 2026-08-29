@@ -38,7 +38,7 @@ export default function HomePage() {
                 description="宮崎県宮崎市を拠点に活動する、元日本代表・井口雄介のソフトテニススクールです。"
               />
 
-              <h3 className="mt-8 text-xl leading-relaxed font-bold whitespace-pre-line text-navy-800 sm:text-2xl">
+              <h3 className="mt-8 text-xl leading-relaxed font-bold whitespace-pre-line text-brand-800 sm:text-2xl">
                 {philosophy.heading}
               </h3>
               <p className="mt-5 text-[15px] leading-relaxed text-slate-600">
@@ -48,7 +48,7 @@ export default function HomePage() {
               {/* 数字で見るスクール */}
               {/* 項目数に合わせて列数が変わります */}
               <dl
-                className="mt-8 grid gap-4 border-t border-navy-100 pt-6"
+                className="mt-8 grid gap-4 border-t border-brand-100 pt-6"
                 style={{
                   gridTemplateColumns: `repeat(${stats.length}, minmax(0, 1fr))`,
                 }}
@@ -57,10 +57,10 @@ export default function HomePage() {
                   <div key={s.label}>
                     <dt className="sr-only">{s.label}</dt>
                     <dd>
-                      <span className="font-display text-3xl font-extrabold text-sky-brand-dark sm:text-4xl">
+                      <span className="font-display text-3xl font-extrabold text-accent-dark sm:text-4xl">
                         {s.value}
                       </span>
-                      <span className="ml-1 text-sm font-bold text-navy-800">
+                      <span className="ml-1 text-sm font-bold text-brand-800">
                         {s.unit}
                       </span>
                       <span className="mt-1 block text-xs leading-snug text-slate-500">
@@ -73,7 +73,7 @@ export default function HomePage() {
 
               <Link
                 href="/school"
-                className="mt-8 inline-flex min-h-[52px] items-center justify-center gap-2 rounded-xl border-2 border-navy-800 bg-white px-7 text-[15px] font-bold text-navy-800 transition-all hover:bg-navy-800 hover:text-white"
+                className="mt-8 inline-flex min-h-[52px] items-center justify-center gap-2 rounded-xl border-2 border-brand-800 bg-white px-7 text-[15px] font-bold text-brand-800 transition-all hover:bg-brand-800 hover:text-white"
               >
                 スクール紹介を詳しく見る
                 <ArrowIcon />
@@ -86,13 +86,13 @@ export default function HomePage() {
                 {policies.map((p) => (
                   <li
                     key={p.title}
-                    className="flex gap-4 rounded-2xl border border-navy-100 bg-navy-50 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md sm:p-6"
+                    className="flex gap-4 rounded-2xl border border-brand-100 bg-brand-50 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md sm:p-6"
                   >
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-brand text-white">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent text-white">
                       <Icon name={p.icon} className="h-6 w-6" />
                     </span>
                     <div>
-                      <h3 className="text-base font-bold text-navy-800">
+                      <h3 className="text-base font-bold text-brand-800">
                         {p.title}
                       </h3>
                       <p className="mt-1.5 text-sm leading-relaxed text-slate-600">
@@ -108,7 +108,7 @@ export default function HomePage() {
       </section>
 
       {/* ③ クラス紹介 */}
-      <section className="bg-navy-50 py-16 md:py-24">
+      <section className="bg-brand-50 py-16 md:py-24">
         <div className="container-page">
           <Reveal>
             <SectionHeading
@@ -136,7 +136,7 @@ export default function HomePage() {
             </p>
             <Link
               href="/classes"
-              className="mt-4 inline-flex min-h-[56px] items-center justify-center gap-2 rounded-xl bg-navy-800 px-8 text-base font-bold text-white transition-all hover:bg-navy-700"
+              className="mt-4 inline-flex min-h-[56px] items-center justify-center gap-2 rounded-xl bg-brand-800 px-8 text-base font-bold text-white transition-all hover:bg-brand-700"
             >
               すべてのクラスを見る
               <ArrowIcon />
@@ -162,15 +162,15 @@ export default function HomePage() {
               {priceRows.map((row) => (
                 <li
                   key={row.key}
-                  className="rounded-2xl border border-navy-100 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                  className="rounded-2xl border border-brand-100 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 >
-                  <p className="text-base font-bold text-navy-800">
+                  <p className="text-base font-bold text-brand-800">
                     {row.className}
                   </p>
                   <p className="mt-3 text-[11px] font-semibold tracking-wider text-slate-500">
                     月会費
                   </p>
-                  <p className="mt-1 text-3xl font-extrabold tracking-tight text-sky-brand-dark">
+                  <p className="mt-1 text-3xl font-extrabold tracking-tight text-accent-dark">
                     {formatPrice(row.monthly)}
                   </p>
                   <p className="mt-2 text-xs text-slate-500">
@@ -187,10 +187,10 @@ export default function HomePage() {
               {specialPrices.map((s) => (
                 <li
                   key={s.name}
-                  className="flex flex-col justify-between rounded-2xl border border-navy-100 bg-navy-50 p-5"
+                  className="flex flex-col justify-between rounded-2xl border border-brand-100 bg-brand-50 p-5"
                 >
-                  <p className="text-sm font-bold text-navy-800">{s.name}</p>
-                  <p className="mt-2 text-lg font-extrabold text-navy-800">
+                  <p className="text-sm font-bold text-brand-800">{s.name}</p>
+                  <p className="mt-2 text-lg font-extrabold text-brand-800">
                     {s.price}
                   </p>
                   {s.note && (
@@ -204,7 +204,7 @@ export default function HomePage() {
           <Reveal className="mt-10 text-center">
             <Link
               href="/prices"
-              className="inline-flex min-h-[56px] items-center justify-center gap-2 rounded-xl bg-sky-brand px-8 text-base font-bold text-white shadow-lg shadow-sky-brand/20 transition-all hover:bg-sky-brand-dark"
+              className="inline-flex min-h-[56px] items-center justify-center gap-2 rounded-xl bg-accent px-8 text-base font-bold text-white shadow-lg shadow-accent/20 transition-all hover:bg-accent-dark"
             >
               料金表を詳しく見る
               <ArrowIcon />
@@ -214,7 +214,7 @@ export default function HomePage() {
       </section>
 
       {/* ⑤ 講師紹介 */}
-      <section className="bg-navy-800 py-16 md:py-24">
+      <section className="bg-brand-800 py-16 md:py-24">
         <div className="container-page">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:items-center lg:gap-14">
             <Reveal>
@@ -237,14 +237,14 @@ export default function HomePage() {
               />
 
               <div className="mt-8">
-                <p className="font-display text-[11px] font-bold tracking-[0.2em] text-sky-brand-light">
+                <p className="font-display text-[11px] font-bold tracking-[0.2em] text-accent-light">
                   {mainInstructor.nameEn}
                 </p>
                 <p className="mt-2 flex flex-wrap items-baseline gap-3">
                   <span className="text-3xl font-bold text-white">
                     {mainInstructor.name}
                   </span>
-                  <span className="text-sm text-navy-200">
+                  <span className="text-sm text-brand-200">
                     {mainInstructor.role}
                   </span>
                 </p>
@@ -255,7 +255,7 @@ export default function HomePage() {
                 {mainInstructor.careers.slice(0, 6).map((c) => (
                   <li
                     key={c}
-                    className="flex gap-2.5 rounded-lg bg-white/5 px-3.5 py-2.5 text-sm text-navy-100"
+                    className="flex gap-2.5 rounded-lg bg-white/5 px-3.5 py-2.5 text-sm text-brand-100"
                   >
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-400" />
                     {c}
@@ -267,7 +267,7 @@ export default function HomePage() {
                 {mainInstructor.message.slice(0, 2).map((p, i) => (
                   <p
                     key={i}
-                    className="text-[15px] leading-relaxed whitespace-pre-line text-navy-100"
+                    className="text-[15px] leading-relaxed whitespace-pre-line text-brand-100"
                   >
                     {p}
                   </p>

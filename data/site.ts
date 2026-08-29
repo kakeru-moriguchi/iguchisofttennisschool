@@ -76,8 +76,9 @@ export const siteConfig = {
   ],
 } as const;
 
-/** グローバルナビゲーション（5項目） */
+/** グローバルナビゲーション */
 export const mainNav = [
+  { label: "ホーム", href: "/" },
   { label: "スクール紹介", href: "/school" },
   { label: "クラス", href: "/classes" },
   { label: "料金表", href: "/prices" },

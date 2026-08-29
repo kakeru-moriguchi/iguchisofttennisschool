@@ -154,9 +154,9 @@ export default function ContactForm() {
         tabIndex={-1}
         role="status"
         aria-live="polite"
-        className="rounded-2xl border border-sky-200 bg-sky-50 p-8 text-center sm:p-12"
+        className="rounded-2xl border border-brand-200 bg-brand-50 p-8 text-center sm:p-12"
       >
-        <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-sky-brand">
+        <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent">
           <svg
             viewBox="0 0 24 24"
             className="h-8 w-8 text-white"
@@ -171,7 +171,7 @@ export default function ContactForm() {
           </svg>
         </span>
 
-        <h2 className="mt-6 text-xl font-bold text-navy-800 sm:text-2xl">
+        <h2 className="mt-6 text-xl font-bold text-brand-800 sm:text-2xl">
           お問い合わせありがとうございます。
         </h2>
         <p className="mt-3 text-[15px] leading-relaxed text-slate-600">
@@ -186,13 +186,13 @@ export default function ContactForm() {
         <div className="mt-8 grid gap-3 sm:mx-auto sm:max-w-md">
           <Link
             href="/"
-            className="flex min-h-[52px] items-center justify-center rounded-xl bg-navy-800 px-6 text-[15px] font-bold text-white transition-colors hover:bg-navy-700"
+            className="flex min-h-[52px] items-center justify-center rounded-xl bg-brand-800 px-6 text-[15px] font-bold text-white transition-colors hover:bg-brand-700"
           >
             トップページに戻る
           </Link>
           <Link
             href="/classes"
-            className="flex min-h-[52px] items-center justify-center rounded-xl border-2 border-navy-800 bg-white px-6 text-[15px] font-bold text-navy-800 transition-colors hover:bg-navy-50"
+            className="flex min-h-[52px] items-center justify-center rounded-xl border-2 border-brand-800 bg-white px-6 text-[15px] font-bold text-brand-800 transition-colors hover:bg-brand-50"
           >
             クラスをもう一度見る
           </Link>
@@ -446,7 +446,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-xl bg-sky-brand px-8 text-base font-bold text-white shadow-lg shadow-sky-brand/20 transition-all hover:bg-sky-brand-dark active:scale-[0.99] disabled:cursor-not-allowed disabled:bg-slate-400 disabled:shadow-none disabled:active:scale-100"
+          className="flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-xl bg-accent px-8 text-base font-bold text-white shadow-lg shadow-accent/20 transition-all hover:bg-accent-dark active:scale-[0.99] disabled:cursor-not-allowed disabled:bg-slate-400 disabled:shadow-none disabled:active:scale-100"
         >
           {isSubmitting ? (
             <>
@@ -485,12 +485,12 @@ export default function ContactForm() {
 /** 入力欄の共通スタイル（タップしやすい高さを確保） */
 function inputClass(hasError: boolean) {
   return cn(
-    "w-full min-h-[52px] rounded-xl border-2 bg-white px-4 text-base text-navy-900 transition-colors",
+    "w-full min-h-[52px] rounded-xl border-2 bg-white px-4 text-base text-brand-900 transition-colors",
     "placeholder:text-slate-400 focus:outline-none",
     "disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-500",
     hasError
       ? "border-red-400 focus:border-red-500"
-      : "border-navy-100 focus:border-sky-brand",
+      : "border-brand-100 focus:border-accent",
   );
 }
 
@@ -513,7 +513,7 @@ function Field({
     <div>
       <label
         htmlFor={id}
-        className="flex flex-wrap items-center gap-2 text-[15px] font-bold text-navy-800"
+        className="flex flex-wrap items-center gap-2 text-[15px] font-bold text-brand-800"
       >
         {label}
         {required ? (

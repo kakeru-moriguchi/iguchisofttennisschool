@@ -15,32 +15,32 @@ export default function CTASection({
   showClassLink = true,
 }: CTASectionProps) {
   return (
-    <section className="relative isolate overflow-hidden bg-navy-800">
+    <section className="relative isolate overflow-hidden bg-brand-800">
       {/* 装飾 */}
       <div
         aria-hidden="true"
-        className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-sky-brand/20 blur-3xl"
+        className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-accent/20 blur-3xl"
       />
       <div
         aria-hidden="true"
-        className="absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-sky-brand/10 blur-3xl"
+        className="absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-accent/10 blur-3xl"
       />
 
       <div className="container-page relative py-16 text-center md:py-20">
-        <p className="font-display text-xs font-semibold tracking-[0.2em] text-sky-brand-light uppercase">
+        <p className="font-display text-xs font-semibold tracking-[0.2em] text-accent-light uppercase">
           Contact
         </p>
         <h2 className="mx-auto mt-3 max-w-2xl text-2xl leading-tight font-bold text-white sm:text-3xl md:text-4xl">
           {title}
         </h2>
-        <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-navy-100 sm:text-base">
+        <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-brand-100 sm:text-base">
           {description}
         </p>
 
         <div className="mx-auto mt-9 grid max-w-lg gap-3 sm:flex sm:max-w-none sm:justify-center sm:gap-4">
           <Link
             href="/contact"
-            className="flex min-h-[56px] items-center justify-center gap-2 rounded-xl bg-sky-brand px-9 text-base font-bold text-white shadow-lg shadow-sky-brand/25 transition-all hover:bg-sky-brand-dark active:scale-[0.99]"
+            className="flex min-h-[56px] items-center justify-center gap-2 rounded-xl bg-accent px-9 text-base font-bold text-white shadow-lg shadow-accent/25 transition-all hover:bg-accent-dark active:scale-[0.99]"
           >
             お問い合わせ・お申し込み
             <svg
@@ -66,7 +66,7 @@ export default function CTASection({
           )}
         </div>
 
-        <p className="mt-6 text-sm text-navy-200">
+        <p className="mt-6 text-sm text-brand-200">
           {siteConfig.contact.hours}／{siteConfig.contact.replyNote}
         </p>
       </div>

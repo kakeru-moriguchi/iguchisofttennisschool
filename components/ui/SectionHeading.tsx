@@ -39,7 +39,7 @@ export default function SectionHeading({
         <p
           className={cn(
             "font-display text-xs font-semibold tracking-[0.2em] uppercase",
-            isDark ? "text-sky-brand-light" : "text-sky-brand-dark",
+            isDark ? "text-accent-light" : "text-accent-dark",
           )}
         >
           {eyebrow}
@@ -48,7 +48,7 @@ export default function SectionHeading({
       <Tag
         className={cn(
           "mt-2 text-2xl leading-tight font-bold sm:text-3xl md:text-4xl",
-          isDark ? "text-white" : "text-navy-800",
+          isDark ? "text-white" : "text-brand-800",
         )}
       >
         {title}
@@ -57,7 +57,7 @@ export default function SectionHeading({
         <div
           className={cn(
             "mt-4 text-[15px] leading-relaxed sm:text-base",
-            isDark ? "text-navy-100" : "text-slate-600",
+            isDark ? "text-brand-100" : "text-slate-600",
           )}
         >
           {description}

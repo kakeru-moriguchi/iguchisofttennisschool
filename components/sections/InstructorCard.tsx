@@ -8,7 +8,7 @@ import type { Instructor } from "@/data/instructors";
  */
 export default function InstructorCard({ item }: { item: Instructor }) {
   return (
-    <article className="overflow-hidden rounded-2xl border border-navy-100 bg-white shadow-sm md:grid md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+    <article className="overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-sm md:grid md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
       {/* 写真 */}
       <div className="relative aspect-[4/5] w-full md:aspect-auto md:h-full md:min-h-[560px]">
         <SmartImage
@@ -19,12 +19,12 @@ export default function InstructorCard({ item }: { item: Instructor }) {
           priority
         />
         {/* SPでは写真の下部に名前を重ねる */}
-        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-900/90 to-transparent px-5 pt-12 pb-5 md:hidden">
-          <p className="font-display text-[10px] font-bold tracking-[0.2em] text-sky-brand-light">
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-900/90 to-transparent px-5 pt-12 pb-5 md:hidden">
+          <p className="font-display text-[10px] font-bold tracking-[0.2em] text-accent-light">
             {item.nameEn}
           </p>
           <p className="mt-1 text-2xl font-bold text-white">{item.name}</p>
-          <p className="mt-1 text-sm text-navy-100">{item.role}</p>
+          <p className="mt-1 text-sm text-brand-100">{item.role}</p>
         </div>
       </div>
 
@@ -32,28 +32,28 @@ export default function InstructorCard({ item }: { item: Instructor }) {
       <div className="p-6 sm:p-8 md:p-10">
         {/* 名前（PCのみ。SPは写真に重ねて表示済み） */}
         <div className="hidden md:block">
-          <p className="font-display text-[11px] font-bold tracking-[0.2em] text-sky-brand-dark">
+          <p className="font-display text-[11px] font-bold tracking-[0.2em] text-accent-dark">
             {item.nameEn}
           </p>
           <h2 className="mt-2 flex flex-wrap items-baseline gap-3">
-            <span className="text-3xl font-bold text-navy-800 lg:text-4xl">
+            <span className="text-3xl font-bold text-brand-800 lg:text-4xl">
               {item.name}
             </span>
             <span className="text-sm text-slate-500">{item.nameKana}</span>
           </h2>
-          <p className="mt-2 inline-flex rounded-full bg-navy-800 px-3.5 py-1 text-xs font-bold text-white">
+          <p className="mt-2 inline-flex rounded-full bg-brand-800 px-3.5 py-1 text-xs font-bold text-white">
             {item.role}
           </p>
         </div>
 
-        <p className="mt-5 text-[15px] leading-relaxed font-bold text-sky-brand-dark md:mt-6">
+        <p className="mt-5 text-[15px] leading-relaxed font-bold text-accent-dark md:mt-6">
           {item.tagline}
         </p>
 
         {/* 経歴 */}
         <section className="mt-7">
-          <h3 className="flex items-center gap-2.5 text-sm font-bold tracking-wider text-navy-800">
-            <span className="h-4 w-1 rounded-full bg-sky-brand" />
+          <h3 className="flex items-center gap-2.5 text-sm font-bold tracking-wider text-brand-800">
+            <span className="h-4 w-1 rounded-full bg-accent" />
             経歴・戦績
           </h3>
           <ul className="mt-3 space-y-2">
@@ -83,15 +83,15 @@ export default function InstructorCard({ item }: { item: Instructor }) {
 
         {/* 得意分野 */}
         <section className="mt-7">
-          <h3 className="flex items-center gap-2.5 text-sm font-bold tracking-wider text-navy-800">
-            <span className="h-4 w-1 rounded-full bg-sky-brand" />
+          <h3 className="flex items-center gap-2.5 text-sm font-bold tracking-wider text-brand-800">
+            <span className="h-4 w-1 rounded-full bg-accent" />
             得意分野
           </h3>
           <ul className="mt-3 flex flex-wrap gap-2">
             {item.specialties.map((s) => (
               <li
                 key={s}
-                className="rounded-lg border border-sky-200 bg-sky-50 px-4 py-2 text-sm font-bold text-sky-brand-dark"
+                className="rounded-lg border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-bold text-accent-dark"
               >
                 {s}
               </li>
@@ -100,9 +100,9 @@ export default function InstructorCard({ item }: { item: Instructor }) {
         </section>
 
         {/* メッセージ */}
-        <section className="mt-7 rounded-xl bg-navy-50 p-5 sm:p-6">
-          <h3 className="flex items-center gap-2.5 text-sm font-bold tracking-wider text-navy-800">
-            <span className="h-4 w-1 rounded-full bg-sky-brand" />
+        <section className="mt-7 rounded-xl bg-brand-50 p-5 sm:p-6">
+          <h3 className="flex items-center gap-2.5 text-sm font-bold tracking-wider text-brand-800">
+            <span className="h-4 w-1 rounded-full bg-accent" />
             メッセージ
           </h3>
           <div className="mt-3 space-y-3">

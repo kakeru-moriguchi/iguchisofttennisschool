@@ -119,7 +119,7 @@ export const classes: SchoolClass[] = [
     frequency: "月4回",
     target: ["中学生以上", "上級者"],
     capacity: "16名",
-    notes: ["大会審査あり"],
+    notes: ["入会審査あり"],
     featured: true,
   },
   {

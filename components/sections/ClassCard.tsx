@@ -22,9 +22,9 @@ const TIER_STYLE = {
     accent: "text-gold-400",
     badge: "bg-gold-500 text-brand-900",
     priceText: "text-gold-300",
-    label: "text-gold-400/80",
-    body: "text-brand-100",
-    divider: "border-white/10",
+    label: "text-gold-300",
+    body: "text-brand-50",
+    divider: "border-white/20",
     button:
       "bg-gold-500 text-brand-900 hover:bg-gold-400 shadow-lg shadow-gold-600/20",
     tone: "gold" as const,
@@ -35,9 +35,9 @@ const TIER_STYLE = {
     accent: "text-silver-300",
     badge: "bg-silver-300 text-graphite-900",
     priceText: "text-white",
-    label: "text-silver-400",
-    body: "text-slate-300",
-    divider: "border-white/10",
+    label: "text-silver-300",
+    body: "text-slate-100",
+    divider: "border-white/20",
     button: "bg-white text-graphite-900 hover:bg-silver-300 shadow-lg",
     tone: "dark" as const,
     ribbon: "選抜クラス",
@@ -271,7 +271,7 @@ export default function ClassCard({
                     className={cn(
                       "rounded-lg px-3 py-2 text-xs leading-relaxed",
                       isPremium
-                        ? "bg-white/10 text-white/85"
+                        ? "bg-white/15 text-white"
                         : "bg-amber-50 text-amber-900",
                     )}
                   >

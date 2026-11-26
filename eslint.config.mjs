@@ -11,7 +11,7 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     // next-env.d.ts は Next.js が自動生成するファイルのため対象外
-    ignores: [".next/**", "node_modules/**", "out/**", "next-env.d.ts"],
+    ignores: [".next/**", "node_modules/**", "out/**", "next-env.d.ts", ".claude/**"],
   },
 ];
 
